@@ -24,10 +24,11 @@ class LoginForm extends React.Component {
     })
   }
 
-  handlePasswordChange = event => {
-    this.setState({
-      password: event.target.value
-    })
+  handleSubmit = event => {
+    event.preventDefault()
+    if(this.state.username.length > 0 && this.state.password.length > 0) {
+      console.log(this.state.username.length)
+    }
   }
 
   render() {
